@@ -29,4 +29,17 @@ def listar_cursos(req):
     #y pasale como contexto dentro de la key lista_cursos la lista que recuperamos de la base de datos
     return render(req,'lista_cursos.html',{'lista_cursos': lista})
 
+def inicio(req):
+    return render(req,'inicio.html')
 
+def cursos(req):
+    return render(req,'cursos.html')
+
+def profesores(req):
+    return render(req,'profesores.html')
+
+def estudiantes(req):
+    return render(req,'estudiantes.html')
+
+def entregables(req):
+    return render(req,'entregables.html')
