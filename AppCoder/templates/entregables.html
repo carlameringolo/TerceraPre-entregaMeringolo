@@ -2,5 +2,12 @@
 
 {% block contenidoQueCambia %}
     <h1>Formulario - Agregar Entregable</h1>
+    <form action="{% url 'EntregableFormulario' %}" method="post">
+        {% csrf_token %}
+        <p>Nombre: <input type="text" name="nombre"></p>
+        <p>Fecha de Entrega: <input type="date" name="fecha_de_entrega"></p>
+        <button type="submit">Enviar</button>
+    </form>
+
 
 {% endblock contenidoQueCambia %}
