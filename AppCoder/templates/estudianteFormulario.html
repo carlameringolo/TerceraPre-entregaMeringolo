@@ -1,0 +1,14 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+    <h1>Formulario - Agregar Estudiante</h1>
+    <form action="{% url 'EstudianteFormulario' %}" method="post">
+        {% csrf_token %}
+        <p>Nombre: <input type="text" name="nombre"></p>
+        <p>Apellido: <input type="text" name="apellido"></p>
+        <p>Email: <input type="email" name="email"></p>
+        <button type="submit">Enviar</button>
+    </form>
+
+{% endblock contenidoQueCambia %}
+
