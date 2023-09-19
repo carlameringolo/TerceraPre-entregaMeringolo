@@ -1,0 +1,15 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+
+    <h1>Formulario - Agregar Curso</h1>
+    <form action="{% url 'Buscar' %}" method="get">
+        
+        <p>Camada: <input type="number" name="camada"></p>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+{% endblock contenidoQueCambia %}
+
+

@@ -75,3 +75,15 @@ def entregableFormulario(req):
         return render(req, 'entregableFormulario.html')
 
 
+def busquedaCamada(req):
+    return render(req,'busquedaCamada.html')
+
+def buscar(req):
+
+    if req.GET['camada']:
+        camada=req.GET['camada']
+        curso=Curso.objects.get(camada=camada)
+        return render(req, 'resultadosBusqueda.html',{'curso':curso})
+    else:
+        return HttpResponse(f'Ingresar numero de camada')
+
